@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photobooth</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a4f80c6f9f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main>
+        <nav>
+            <h1>Photobooth</h1>
+        </nav>
+        <section class="container">
+            <button id="camBtn"><span id="camBtnText">Turn On Camera<i class="fa-solid fa-camera"></i></span></button>
+            
+        </section>
+        
+        <section>
+            <div class="photos-container">
+                <h2>Gallery</h2>
+                <hr>
+                <div id="photos"></div>
+            </div>
+        </section>
+    </main>
+    <section class="video-container" id="v-container">
+        <i class="fa-solid fa-x" id="close"></i>
+        <video autoplay id="video"></video>
+        <button class="capture" id="capture"></button>
+        <div id="cr-container">
+            <div id="carousel-right"></div>
+        </div>
+    </section>
+    <script src="./script.js"></script>
+</body>
+</html>

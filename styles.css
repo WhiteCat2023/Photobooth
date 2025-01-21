@@ -1,0 +1,192 @@
+:root{
+    --bg-color: #242424;
+    --primary-font-color: #e0e0e0;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #161616;
+    border-radius: 20px;
+}
+::-webkit-scrollbar-track{
+    background-color: #393939;
+}
+
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--bg-color);
+    color: var(--primary-font-color);
+}
+main{
+    position: relative;
+}
+nav{
+    padding: 10px 20px;
+}
+h1{
+    font-size: 2rem;
+}
+.container{
+    width: 100%;
+    height: calc(100dvh - 57px);
+    position: relative;
+}
+.photos-container{
+    padding: 0 30px;
+}
+#photos{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+}
+#photos > .photo{
+    position: relative;
+    width: 24%;
+    height: fit-content;
+}
+#photos > .photo > img{
+    width: 100%;
+    border-radius: 20px;
+}
+#photos > .photo > button{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+#video{
+    width: 100%;
+    height: 100%;
+}
+#capture{
+    position: inherit;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: none;
+    cursor: pointer;
+}
+#capture::after{
+    content: "";
+    position: absolute;
+    border: 5px solid white;
+    height: 70px;
+    width: 70px;
+    top: -10px;
+    left: -10px;
+    border-radius: 100%;
+}
+#close{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+#close,
+#camBtn{
+    z-index: 99999999;
+}
+.video-container{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    width: 100%;
+    height: 100dvh;
+    display: none;
+}
+#cr-container{
+    position: inherit;
+    right: 0;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    overflow: auto;
+}
+#carousel-right{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   padding: 20px;
+}
+#carousel-right .photo,
+#carousel-right > .photo > img{
+    width: 100%;
+    border-radius: 20px;
+}
+#carousel-right > .photo > button{
+    display: none;
+}
+
+/* Cam button first thing you see when you open the page. When clicked it shows the camera */
+#camBtn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 450px;
+    border-radius: 20px;
+    height: 300px;
+    background: linear-gradient(45deg, #202020, #272727);
+    box-shadow:  12px -12px 36px #161616,
+             -12px 12px 36px #323232;
+    border: none;             
+    padding: 20px;
+    cursor: pointer;
+    
+}
+#camBtn *{
+    transition: all .3s ease-in-out;
+    text-shadow: 0 0 3px black;
+}
+#camBtn *:hover{
+    color: #fff;
+    border-color: #fff;
+    text-shadow: 0 0 10px #fff;
+}
+#camBtnText{
+    padding-top: 60px;
+    height: 100%;
+    color: #323232;
+    font-size: 2.5rem;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 10px solid #323232;
+    border-style:dashed;
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+#camBtnText > i{
+    width: fit-content;
+    height: fit-content;
+    margin: 0 auto;
+}
+
+@media  only screen and (max-width: 1600px) {
+   #cr-container{
+    display: none;
+   }
+}
