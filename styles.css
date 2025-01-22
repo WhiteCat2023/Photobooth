@@ -267,6 +267,11 @@ h1{
 #gallery-section{
     display: none;
 }
+footer{
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+}
 
 @media  only screen and (max-width: 1600px) {
    #cr-container{
